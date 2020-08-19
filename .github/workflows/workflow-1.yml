@@ -1,0 +1,13 @@
+name: Workflow 1
+
+on: [push]
+
+jobs:
+  first-job:
+    name: First job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo FOO
+        env:
+          FOO: foo
+        run: echo $FOO

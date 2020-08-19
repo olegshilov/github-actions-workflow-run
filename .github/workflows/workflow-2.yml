@@ -1,0 +1,17 @@
+name: Workflow 2
+on:
+  workflow_run:
+    workflows: ['Workflow 1']
+    types:
+      - completed
+      - requested
+
+jobs:
+  another-job:
+    name: Another job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo BAR
+        env:
+          BAR: bar
+        run: echo $BAR
