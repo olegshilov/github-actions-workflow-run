@@ -4,7 +4,6 @@ on:
     workflows: ['Workflow 1']
     types:
       - completed
-      - requested
 
 jobs:
   another-job:
